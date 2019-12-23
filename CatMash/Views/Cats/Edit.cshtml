@@ -1,12 +1,12 @@
 ﻿@model CatMash.Models.Cat
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Modifier";
 }
 
-<h1>Edit</h1>
+<h1>Modifier</h1>
 
-<h4>Cat</h4>
+<h4>Chat</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,17 +19,7 @@
                 <span asp-validation-for="Cat_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Date_Cre" class="control-label"></label>
-                <input asp-for="Date_Cre" class="form-control" />
-                <span asp-validation-for="Date_Cre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cat_picture" class="control-label"></label>
-                <input asp-for="Cat_picture" class="form-control" />
-                <span asp-validation-for="Cat_picture" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Valider" class="btn btn-primary" />
             </div>
         </form>
     </div>

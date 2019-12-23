@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>List Des Chats</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Ajouter Un Chat</a>
 </p>
 <table class="table">
     <thead>
@@ -15,11 +15,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Cat_Name)
             </th>
+            
             <th>
-                @Html.DisplayNameFor(model => model.Date_Cre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cat_picture)
+                @Html.DisplayNameFor(model => model.Picture_Path)
             </th>
             <th></th>
         </tr>
@@ -30,16 +28,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Cat_Name)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_Cre)
-            </td>
+            
             <td>
                 <img src="~/images/@item.Picture_Path" alt="image" width="318" height="159"/>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Modifier</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Détails</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
             </td>
         </tr>
 }
